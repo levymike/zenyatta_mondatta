@@ -1,1 +1,0 @@
-# zenyatta_mondatta
