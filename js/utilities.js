@@ -14,11 +14,10 @@ function addEvent (el, event, callback) {
 // Helper function to remove an event listener
 function removeEvent(el, event, callback) {
   if ('removeEventListener' in el) {                      // If removeEventListener works
-    el.removeEventListener(event, callback, false);       // Use it 
+    el.removeEventListener(event, callback, false);       // Use it
   } else {                                                // Otherwise
     el.detachEvent('on' + event, el[event + callback]);   // Create IE fallback
     el[event + callback] = null;
     el['e' + event + callback] = null;
   }
 }
-
