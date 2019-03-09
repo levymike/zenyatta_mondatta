@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<title>Test App</title>
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  	<link rel="stylesheet" href="css/styles.css" />
+  	<script src="js/script.min.js"></script>
+  	<script src="js/script.mobile.js"></script>
+  </head>
+  <body>
+
+    <div data-role="page">
+
+      <div data-role="panel" id="myPanel" data-display="overlay">
+        <ul data-role="listview">
+          <li data-icon="home"><a href="index.html">Home</a></li>
+          <li><a href="pageTwo.html">Two</a></li>
+          <li><a href="pageThree.html">Three</a></li>
+        </ul><br />
+        <a href="#headerOne" data-rel="close" class="ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all">No text</a>
+      </div><!-- /panel -->
+
+      <div data-role="header" id="headerOne" style="overflow:hidden;">
+    		<h1>Page One</h1>
+        <a href="#myPanel" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all">No text</a>
+        <a href="#" data-icon="gear" class="ui-btn-right">Options</a>
+        <div data-role="navbar" data-iconpos="left">
+          <ul>
+            <li><a href="index.html" class="ui-btn-active" data-icon="home">Page One</a></li>
+            <li><a href="pageTwo.html" data-icon="grid">Page Two</a></li>
+            <li><a href="pageThree.html" data-icon="gear">Page Three</a></li>
+          </ul>
+        </div><!-- /navbar -->
+    	</div><!-- /header -->
+
+    	<div role="main" class="ui-content">
+
+        <form>
+          <div class="ui-field-contain">
+            <label for="select-native-1">Choose county:</label>
+            <select name="select-native-1" id="county" onchange="ChangeCountyList()">
+              <option value="antrim">Antrim</option>
+              <option value="armagh">Armagh</option>
+              <option value="carlow">Carlow</option>
+              <option value="cavan">Cavan</option>
+              <option value="clare">Clare</option>
+              <option value="cork">Cork</option>
+              <option value="derry">Derry</option>
+              <option value="donegal">Donegal</option>
+              <option value="down">Down</option>
+              <option value="dublin">Dublin</option>
+              <option value="fermanagh">Fermanagh</option>
+              <option value="galway">Galway</option>
+              <option value="kerry">Kerry</option>
+              <option value="kildare">Kildare</option>
+              <option value="kilkenny">Kilkenny</option>
+              <option value="laois">Laois</option>
+              <option value="leitrim">Leitrim</option>
+              <option value="limerick">Limerick</option>
+              <option value="longford">Longford</option>
+              <option value="louth">Louth</option>
+              <option value="mayo">Mayo</option>
+              <option value="meath">Meath</option>
+              <option value="monaghan">Monaghan</option>
+              <option value="offaly">Offaly</option>
+              <option value="roscommon">Roscommon</option>
+              <option value="sligo">Sligo</option>
+              <option value="tipperary">Tipperary</option>
+              <option value="tyrone">Tyrone</option>
+              <option value="waterford">Waterford</option>
+              <option value="westmeath">Westmeath</option>
+              <option value="wexford">Wexford</option>
+              <option value="wicklow">Wicklow</option>
+            </select>
+          </div>
+        </form>
+
+        <form>
+          <div class="ui-field-contain">
+            <label for="select-native-2">Choose town:</label>
+            <select name="select-native-2" id="town">
+            </select>
+          </div>
+        </form>
+
+        <div>
+          <button onclick="displayTown()">Choose</button>
+          <h3 id="countySel">County: </h3>
+          <h3 id="townSel">Town: </h3>
+        </div>
+
+    	</div><!-- /content -->
+
+    	<div data-role="footer" data-position="fixed">
+    		<h4>Page Footer</h4>
+    	</div><!-- /footer -->
+    </div><!-- /page -->
+
+  </body>
+</html>

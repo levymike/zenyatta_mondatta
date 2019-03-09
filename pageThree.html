@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<title>Test App</title>
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  	<link rel="stylesheet" href="css/styles.css" />
+  	<script src="js/script.min.js"></script>
+  	<script src="js/script.mobile.js"></script>
+  </head>
+  <body>
+
+    <div data-role="page">
+
+      <div data-role="panel" id="myPanel" data-display="overlay">
+        <ul data-role="listview">
+          <li data-icon="home"><a href="index.html">Home</a></li>
+          <li><a href="pageTwo.html">Two</a></li>
+          <li><a href="pageThree.html">Three</a></li>
+        </ul><br />
+        <a href="#headerOne" data-rel="close" class="ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all">No text</a>
+      </div><!-- /panel -->
+
+      <div data-role="header" id="headerOne" style="overflow:hidden;">
+    		<h1>Page Three</h1>
+        <a href="#myPanel" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all">No text</a>
+        <a href="#" data-icon="gear" class="ui-btn-right">Options</a>
+        <div data-role="navbar" data-iconpos="left">
+          <ul>
+            <li><a href="index.html" class="ui-btn-active" data-icon="home">Page One</a></li>
+            <li><a href="pageTwo.html" data-icon="grid">Page Two</a></li>
+            <li><a href="pageThree.html" data-icon="gear">Page Three</a></li>
+          </ul>
+        </div><!-- /navbar -->
+    	</div><!-- /header -->
+
+    	<div role="main" class="ui-content">
+    		<p>Page content goes here.</p>
+    	</div><!-- /content -->
+
+    	<div data-role="footer" data-position="fixed">
+    		<h4>Page Footer</h4>
+    	</div><!-- /footer -->
+    </div><!-- /page -->
+
+  </body>
+</html>
